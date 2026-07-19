@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>SkillBridge</h2>
+
+        <div class="nav-buttons">
+
+            <a href="/">
+                <button>Home</button>
+            </a>
+
+            <a href="/login">
+                <button>Login</button>
+            </a>
+
+            <a href="/register">
+                <button>Register</button>
+            </a>
+
+        </div>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Every Skill Has Value</h1>
+
+            <p>
+                SkillBridge is an AI-powered community skill exchange platform where people
+                help one another by sharing skills and earn Community Credits for every
+                successful contribution.
+            </p>
+
+            <button class="start-btn">Get Started</button>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="{{ url_for('static', filename='images/hero.png') }}" alt="SkillBridge">
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Skill Requests - SkillBridge</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <h2>SkillBridge</h2>
+
+
+    <div class="nav-buttons">
+
+        <a href="/dashboard">
+            <button>
+                Dashboard
+            </button>
+        </a>
+
+
+        <a href="/logout">
+            <button>
+                Logout
+            </button>
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+
+<div class="dashboard">
+
+
+    <h1>📩 Skill Exchange Requests</h1>
+
+
+
+    {% if requests %}
+
+
+
+        {% for req in requests %}
+
+
+
+        <div class="form-container">
+
+
+            <h2>
+                {{ req['skill'] }}
+            </h2>
+
+
+            <p>
+                <b>From:</b>
+                {{ req['name'] }}
+            </p>
+
+
+            <p>
+                <b>Status:</b>
+                {{ req['status'] }}
+            </p>
+
+
+
+
+            {% if req['status'] == "Pending" %}
+
+
+            <a href="/accept/{{req['id']}}">
+
+                <button>
+                    ✅ Accept
+                </button>
+
+            </a>
+
+
+
+            <a href="/reject/{{req['id']}}">
+
+                <button>
+                    ❌ Reject
+                </button>
+
+            </a>
+
+
+
+            {% endif %}
+
+
+
+        </div>
+
+
+
+        {% endfor %}
+
+
+
+    {% else %}
+
+
+
+        <div class="form-container">
+
+            <h2>
+                No Requests Yet
+            </h2>
+
+            <p>
+                Skill exchange requests will appear here.
+            </p>
+
+        </div>
+
+
+
+    {% endif %}
+
+
+
+
+
+    <a href="/dashboard">
+
+        <button>
+            Back to Dashboard
+        </button>
+
+    </a>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

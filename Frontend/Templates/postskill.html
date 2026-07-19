@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Post Skill - SkillBridge</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <h2>SkillBridge</h2>
+
+    <div class="nav-buttons">
+
+        <a href="/dashboard">
+            <button>Dashboard</button>
+        </a>
+
+        <a href="/logout">
+            <button>Logout</button>
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<div class="form-container">
+
+
+<h1>➕ Post Your Skill</h1>
+
+
+<form method="POST">
+
+
+<input 
+type="text" 
+name="skill" 
+placeholder="Skill Name"
+required>
+
+
+<textarea 
+name="description"
+placeholder="Description"
+rows="5"
+required></textarea>
+
+
+
+<input 
+type="text"
+name="category"
+placeholder="Category (Programming, Design etc.)">
+
+
+
+<label>
+Experience Level
+</label>
+
+
+<select name="experience" required>
+
+
+<option value="Beginner">
+Beginner
+</option>
+
+
+<option value="Intermediate">
+Intermediate
+</option>
+
+
+<option value="Advanced">
+Advanced
+</option>
+
+
+</select>
+
+
+
+<button type="submit">
+Post Skill
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</body>
+
+</html>

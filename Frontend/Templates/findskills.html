@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Find Skills</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <h2>SkillBridge</h2>
+
+    <div class="nav-buttons">
+
+        <a href="/dashboard">
+            <button>Dashboard</button>
+        </a>
+
+        <a href="/logout">
+            <button>Logout</button>
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<div class="dashboard">
+
+
+<h1>🔍 Find Skills</h1>
+
+
+<form method="GET">
+
+<input 
+type="text"
+name="search"
+placeholder="Search skills or category">
+
+
+<button>
+Search
+</button>
+
+</form>
+
+
+<br><br>
+
+
+
+{% for skill in skills %}
+
+
+<div class="form-container">
+
+
+<h2>
+{{skill['skill']}}
+</h2>
+
+
+<p>
+Description:
+{{skill['description']}}
+</p>
+
+
+<p>
+Category:
+{{skill['category']}}
+</p>
+
+
+<p>
+Experience:
+{{skill['experience']}}
+</p>
+
+
+<p>
+Posted By:
+{{skill['name']}}
+</p>
+
+
+
+<a href="/request/{{skill['id']}}">
+
+<button>
+Request Skill Exchange
+</button>
+
+</a>
+
+
+</div>
+
+
+{% endfor %}
+
+
+
+<a href="/dashboard">
+<button>
+Back to Dashboard
+</button>
+</a>
+
+
+</div>
+
+
+</body>
+
+</html>

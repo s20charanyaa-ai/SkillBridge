@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Skills - SkillBridge</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <h2>SkillBridge</h2>
+
+    <div class="nav-buttons">
+
+        <a href="/dashboard">
+            <button>
+                Dashboard
+            </button>
+        </a>
+
+
+        <a href="/logout">
+            <button>
+                Logout
+            </button>
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+
+<div class="dashboard">
+
+
+    <h1>📚 My Posted Skills</h1>
+
+
+
+    {% if skills %}
+
+
+        {% for skill in skills %}
+
+
+        <div class="form-container">
+
+
+            <h2>
+                {{ skill['skill'] }}
+            </h2>
+
+
+            <p>
+                <b>Description:</b>
+                {{ skill['description'] }}
+            </p>
+
+
+            <p>
+                <b>Category:</b>
+                {{ skill['category'] }}
+            </p>
+
+
+            <p>
+                <b>Experience:</b>
+                {{ skill['experience'] }}
+            </p>
+
+
+        </div>
+
+
+        {% endfor %}
+
+
+    {% else %}
+
+
+        <div class="form-container">
+
+            <h2>
+                No Skills Posted Yet
+            </h2>
+
+            <p>
+                Start sharing your skills with the community!
+            </p>
+
+        </div>
+
+
+    {% endif %}
+
+
+
+
+    <a href="/postskill">
+
+        <button>
+            ➕ Post New Skill
+        </button>
+
+    </a>
+
+
+
+    <a href="/dashboard">
+
+        <button>
+            Back to Dashboard
+        </button>
+
+    </a>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Dashboard - SkillBridge</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<h2>SkillBridge</h2>
+
+
+<div class="nav-buttons">
+
+
+<a href="/logout">
+<button>
+🚪 Logout
+</button>
+</a>
+
+
+</div>
+
+</nav>
+
+
+
+
+<div class="dashboard">
+
+
+<h1>
+🌉 SkillBridge Dashboard
+</h1>
+
+
+<h2>
+Welcome, {{ username }} 👋
+</h2>
+
+
+<p>
+Share your skills and discover skills from the community.
+</p>
+
+
+
+<br>
+
+
+
+<div class="dashboard-buttons">
+
+
+<a href="/postskill">
+
+<button>
+➕ Post a Skill
+</button>
+
+</a>
+
+
+
+<a href="/myskills">
+
+<button>
+📚 My Skills
+</button>
+
+</a>
+
+
+
+<a href="/findskills">
+
+<button>
+🔍 Find Skills
+</button>
+
+</a>
+
+
+
+<a href="/requests">
+
+<button>
+📩 My Requests
+</button>
+
+</a>
+
+
+</div>
+
+
+
+<br><br>
+
+
+
+<div class="form-container">
+
+
+<h2>
+Your SkillBridge Journey 🚀
+</h2>
+
+
+<p>
+✅ Create your skills profile
+</p>
+
+
+<p>
+✅ Teach others what you know
+</p>
+
+
+<p>
+✅ Discover new skills
+</p>
+
+
+<p>
+✅ Exchange knowledge with the community
+</p>
+
+
+<p>
+✅ Receive and manage skill requests
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
